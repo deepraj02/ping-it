@@ -1,0 +1,16 @@
+version: "3"
+tasks:
+  api-run:
+    desc: Run the API Containers
+    cmds:
+      - cd api && docker-compose up -d
+
+  build-cli:
+    desc: Build CLI
+    cmds:
+      - cd cli && GOFLAGS=-mod=mod go build -o bin/ping-it main.go 
+
+  run-cli:
+    desc: Run CLI
+    cmds:
+      - cd cli && GOFLAGS=-mod=mod go run main.go
