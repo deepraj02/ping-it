@@ -1,6 +1,5 @@
 /*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
+Copyright © 2024 Deepraj Baidya deeprajbaidya@gmail.com
 */
 package main
 
