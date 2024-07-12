@@ -17,7 +17,7 @@ import (
 
 // shortenCmd represents the shorten command
 var shortenCmd = &cobra.Command{
-	Use:   "shorten [url]",
+	Use:   "shorten [url] string",
 	Short: "Takes a String as an URL and returns shorten version of it.",
 	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
@@ -73,7 +73,7 @@ var shortenCmd = &cobra.Command{
 		}
 
 		fmt.Println("URL shortened successfully.")
-		fmt.Println("Shortened URL:", apiResponse.ShortURL)
+		fmt.Printf("Shortened URL: http://%s\n", apiResponse.ShortURL)
 	},
 }
 
