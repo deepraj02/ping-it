@@ -8,7 +8,7 @@ tasks:
   build-cli:
     desc: Build CLI
     cmds:
-      - cd cli && GOFLAGS=-mod=mod go build -o bin/ping-it main.go 
+      - cd cli && GOFLAGS=-mod=mod go build -o bin/pingit main.go 
 
   run-cli:
     desc: Run CLI
