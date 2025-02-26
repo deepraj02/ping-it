@@ -3,6 +3,7 @@ package routes
 import (
 	"fmt"
 	"log"
+	"os"
 	"strconv"
 	"time"
 
@@ -103,7 +104,7 @@ func ShortenURL(c *fiber.Ctx) error {
 	ttl, _ := r2.TTL(database.Ctx, c.IP()).Result()
 	resp.XRateLimitReset = ttl / time.Nanosecond / time.Minute
 
-	resp.CustomShort = "localhost:3000/" + id
+	resp.CustomShort = os.Getenv("BASE_URL") + ":3000" + id
 
 	return c.Status(fiber.StatusOK).JSON(resp)
 }

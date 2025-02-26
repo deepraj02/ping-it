@@ -3,7 +3,7 @@ tasks:
   api-run:
     desc: Run the API Containers
     cmds:
-      - cd api && docker-compose up -d
+      - cd api && docker compose up -d
 
   build-cli:
     desc: Build CLI

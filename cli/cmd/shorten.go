@@ -40,7 +40,7 @@ var shortenCmd = &cobra.Command{
 
 		// Define the API endpoint
 		/// TODO: Remove HardCoded Data
-		const apiURL = "http://localhost:3000/api/v1/"
+		apiURL := os.Getenv("API_URL")
 
 		// Create a new request
 		req, err := http.NewRequest("POST", apiURL, bytes.NewBuffer(requestBody))

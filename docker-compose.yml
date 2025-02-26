@@ -4,6 +4,8 @@ services:
     build: api
     ports:
       - "3000:3000"
+    environment:
+      - BASE_URL=${BASE_URL}
     depends_on:
       - db
 

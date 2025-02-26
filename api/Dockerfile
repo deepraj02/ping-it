@@ -26,4 +26,6 @@ WORKDIR /app
 
 EXPOSE 3000
 
+ENV BASE_URL = ${BASE_URL}
+
 CMD [ "./main" ]
